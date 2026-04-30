@@ -68,7 +68,7 @@ void setup() {
 void loop() {
   static local_time_t now = {12, 34, 56};
 
-  display_time_t(now);
+  display_time(now);
   now = count_up(now);
 
   delay(1000);

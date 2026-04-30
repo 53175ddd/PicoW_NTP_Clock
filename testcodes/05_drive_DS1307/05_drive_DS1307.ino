@@ -6,7 +6,7 @@
 
 #define BAUDRATE 115200
 
-#define TEST_SIZE 4
+#define TEST_SIZE 20
 
 /*
 uint8_t dec2bcd(uint8_t datum) {
@@ -65,7 +65,7 @@ void setup() {
     uint8_t w = test_data[i];
     uint8_t r = read_buffer[i];
 
-    sprintf(buffer, "[%2d of %2d] wrote data = 0x%x, read data = 0x%x, %s\n", i + 1, TEST_SIZE, w, r, (w == r) ? "OK!" : "Failed...");
+    sprintf(buffer, "[%2d of %2d] wrote data = 0x%0x, read data = 0x%0x, %s\n", i + 1, TEST_SIZE, w, r, (w == r) ? "OK!" : "Failed...");
     Serial.print(buffer);
   }
 
